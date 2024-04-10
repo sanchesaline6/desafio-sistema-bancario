@@ -69,20 +69,21 @@ def extrato():
 while True:
     opcao = input(menu)
 
-    if opcao == "d":
-        print("Opção escolhida: Depósito")
-        valor = float(input("Informe o valor que deseja depositar: "))
-        deposito(valor)
-    elif opcao == "s":
-        print("Opção escolhida: Saque")
-        valor = float(input("Informe o valor que deseja sacar: "))
-        saque(valor)
-    elif opcao == "e":
-        print("Opção escolhida: Extrato")
-        extrato()
-    elif opcao == "q":
-        print("Opção escolhida: Sair")
-        break;
-    else:
-        print("Operação inválida, por favor selecione novamente a operação desejada.")
+    match opcao:
+        case "d":
+            print("Opção escolhida: Depósito")
+            valor = float(input("Informe o valor que deseja depositar: "))
+            deposito(valor)
+        case "s":
+            print("Opção escolhida: Saque")
+            valor = float(input("Informe o valor que deseja sacar: "))
+            saque(valor)
+        case "e":
+            print("Opção escolhida: Extrato")
+            extrato()
+        case "q":
+            print("Opção escolhida: Sair")
+            break;
+        case _:
+            print("Operação inválida, por favor selecione novamente a operação desejada.")
 
