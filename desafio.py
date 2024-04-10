@@ -22,13 +22,13 @@ def deposito(valor):
     global extratos
     # Verificar se o valor informado é positivo
     if(valor > 0):
-        saldo = saldo + valor
+        saldo += valor
     else:
         print("Valor informado inválido. Por favor informar um valor positivo para depósito.")
     # Armazenar depósito em uma variável
-    depositos = depositos + valor
+    depositos += valor
     # Registrar a operação no extrato
-    extratos = extratos + "Depósito => R$ " + '{:.2f}'.format(valor) + "\n"
+    extratos += f"Depósito => R$ {valor:.f}\n"
 
 def saque(valor):
      global saldo
@@ -41,10 +41,10 @@ def saque(valor):
      if(numero_saques <= LIMITE_SAQUES):
          if(valor <= 500): # Verificar se o valor do saque é inferior a R$ 500,00
              if(saldo >= valor):
-                 saques = saques + valor # Armazenar o saque em uma variável
-                 saldo = saldo - valor # Verificar se o usuário possui saldo em conta
-                 numero_saques = numero_saques + 1
-                 extratos = extratos + "Saque => R$ " + '{:.2f}'.format(valor) + "\n" # Registrar a operação no extrato
+                 saques += valor # Armazenar o saque em uma variável
+                 saldo -= valor # Verificar se o usuário possui saldo em conta
+                 numero_saques += 1
+                 extratos += f"Depósito => R$ {valor:.f}\n" # Registrar a operação no extrato
              else:
                  print("Saldo insuficiente. Consulte seu saldo")
          else:             
