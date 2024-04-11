@@ -25,7 +25,7 @@ Os valores devem ser exibidos utilizando o formato R$ xxx.xx, exemplo:
 
 ### Função de saque
 
-A função de saque deve receber os arguentos apenas por nome (keyword only). Sugestão de argumentos: saldo, valor, extrato, limite, numero_saques, limite_saques. Sugestão de retorno: saldo e extrato.
+A função de saque deve receber os argmuentos apenas por nome (keyword only). Sugestão de argumentos: saldo, valor, extrato, limite, numero_saques, limite_saques. Sugestão de retorno: saldo e extrato.
 
 ### Cadastrar usuário (cliente do banco)
 
